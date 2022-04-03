@@ -1,0 +1,193 @@
+body{
+   direction: rtl;
+   margin:0;
+   padding:0;
+   box-sizing: border-box;
+   font-family: Tajawal,sans-serif;
+   
+}
+*{
+   margin:0;
+   padding:0;
+   box-sizing: border-box;
+}
+.container{
+   padding:0 15px;
+   margin:auto;
+   width:95%;
+
+}
+header{
+   padding:10px 0;
+   text-align: center;
+}
+form{
+   width:40%;
+   margin: auto;
+   padding:20px 0 30px 0;
+   /* background-color: violet; */
+}
+input{
+   outline: none;
+}
+.input_containtr{
+   margin-top:10px;
+   border: none;
+   border-radius: 2px;
+   background-color: #eff2f7;
+   padding:8px;
+
+}
+.pay{
+   display: flex;
+   justify-content: space-between;
+}
+.input_containtr input{
+   border: none;
+   background-color: transparent;
+   width: 100%;
+
+   
+}
+.number_container{
+   display: flex;
+   justify-content: space-between;
+}
+.number_container div:first-of-type{
+flex:1;
+
+}
+.number_container div:nth-of-type(2){
+   width:95px;
+   margin-right: 10px;
+}
+.input_containtr{
+   position:relative;
+}
+.number_container span:first-of-type{
+   font-size: .5em;
+   position:absolute;
+   top: 2px;
+}
+.number_container select{
+   position: absolute;
+   border:none;
+   background-color: transparent;
+   direction: ltr;
+   bottom: 5px;
+   outline: none;
+}
+.number_container span:nth-of-type(2){
+   display: block;
+   margin-right: 2px;
+}
+.number_container i{
+   display: inline-block ;
+   position:absolute;
+   bottom: 5px;
+   left: 10px;
+   width:25px;
+   height: 15px;
+}
+.number_container i img{
+   width:100%;
+   height: 100%;
+}
+.span_valid_num{
+  position: absolute;
+ color:#8e868f;
+ right:calc(50% - 49px);
+ background-color: #e5e9f2;
+}
+
+.input_containtr .input_title {
+   right:5px;
+   top:2px;
+   position: absolute;
+   font-size: .7em;
+   color:#8e868f;
+} 
+.input_darker{
+   color:#9a9da2;
+
+   background-color: #e5e9f2;
+
+}
+.input_containtr button{
+   outline: none;
+   border: none;
+   width: 100%;
+   background-color: transparent;
+   color:#8e868f;
+   
+}
+.valid_notes{
+   margin-top: 10px;
+   font-size: .8rem;
+   color:#9a9da2
+}
+.valid_notes span{
+   font-weight: bold;
+  
+
+}
+.form_footer{
+   text-align: center;
+   padding: 15px;
+   color:#616d6b;
+}
+.form_footer a{
+   text-decoration: none;
+   color:#0952d3;
+
+}
+.checkbox_container{
+   margin:20px 0 ;
+  color:#9a9da2
+
+}
+.checkbox_container span{
+   color:#0952d3;
+}
+
+input[type="checkbox"]:first-of-type{
+   margin-bottom: 10px;
+
+}
+.forget{
+   color:#0952d3;
+   position: absolute;
+   left:10px;
+
+}
+.log_in{
+   background-color:#d4050b;
+}
+.log_in button{
+   color: white ;
+  
+}
+.creat_account{
+   display: block;
+   border: none;
+   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.123);
+   background-color: transparent;
+   padding:8px;
+   width:200px;
+   margin: auto;
+   margin-top: 10px;
+}
+.contry_key{
+   border:#9a9da2;
+   color:grey;
+   outline: #9a9da2;
+}
+.pay_method{
+   color:grey;
+}
+@media(max-width:768px){
+   form{
+      width:70%;
+   }
+   
+}

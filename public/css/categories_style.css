@@ -1,0 +1,462 @@
+:root{
+   --main-blue:#3073d6;
+   --main-green:#1c6824;
+   --main-red:#d40b0e;
+   --secondary-red:#f71108;
+}
+
+body{
+   direction: rtl;
+   margin:0;
+   padding:0;
+   box-sizing: border-box;
+   font-family: Tajawal,sans-serif;
+   
+}
+*{
+   margin:0;
+   padding:0;
+   box-sizing: border-box;
+}
+.container{
+   padding:0 15px;
+   margin:auto;
+   width:95%;
+
+}
+
+.cat-section{
+   width:305px;
+}
+.cat-section a{
+   text-decoration: none;
+   color:var(--main-blue);
+}
+.cate_body{
+   width:91%;
+  
+}
+
+.cate_body li{
+list-style: none;
+display: flex;
+justify-content: space-between;
+font-size: .8rem;
+
+}
+.cate_body .list_con {
+   list-style: none;
+  font-weight: bold;
+   border-bottom:1px solid #cfe3f7;
+   
+
+  
+ }
+ .cate_body .list_con  a ,i{
+    color:#636363;
+ }
+ .cate_body .list_con i{
+   font-size: .9rem;
+ }
+
+ .cate_body li+li{
+border-top:1px solid #cfe3f7;
+border-left:1px solid #cfe3f7;
+   border-right:1px solid #cfe3f7;
+ } 
+ .cate_body li:first-of-type{
+    background-color: #145c13;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 7px 9px;
+   
+ }
+ .cate_body li:first-of-type a{
+    color:white;
+ }
+ .cate_body li:nth-of-type(2),
+ .cate_body li:nth-of-type(3),
+ .cate_body li:nth-of-type(5){
+   padding:9px;
+    background-color: #edf6ff;
+ }
+ .range_cont{
+    flex-direction: column;
+    height: 65px;
+    padding: 20px 0px 10px 14px;
+    
+ }
+ .range{
+   position: relative;
+   height: 8px;
+   background-color: #808080d1;
+   width:100%;
+
+ }
+ .range:before{
+    content: "";
+    position: absolute;
+    top:-53%;
+    height: 16px;
+    width:16px;
+    background-color: var(--main-red);
+ }
+ .range:after{
+   content: "";
+   position: absolute;
+   top:-53%;
+   left: 0;
+   height: 16px;
+   width:16px;
+   background-color: var(--main-red);
+}
+.pric_con{
+   position: relative;
+   left:-9px ;
+   display: flex;
+   justify-content: space-between;
+   color:#948f8f;
+   font-weight: lighter;
+   
+}
+.cat_header .sperator{
+   margin:0 10px;
+   color:#80808057;
+}
+.cat_name{
+   padding:10px;
+   border: .5px solid  var(--main-green);
+   border-radius: 3px;
+   color:var(--main-green);
+   margin: 10px 0;
+}
+.cat_name i{
+   color:var(--main-green);
+}
+.title{
+   display: inline-block;
+   margin-right:5px;
+   font-weight: bold;
+}
+
+    .close{
+        cursor: pointer;
+    }
+   a{
+       color:black;
+       text-decoration: none;
+   }
+    .img_container i{
+        display: inline-block;
+        width: 100px;
+        height:100px;
+
+    }
+    .img_container i img{
+        width:100%;
+        height:100%;
+    }
+    .show_all{
+        color:blue;
+    }
+    .offers_cards_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,170px);
+    gap: 10px;
+    justify-content: center;
+}
+
+  
+    .card{
+        position: relative;
+        border: 1px solid lightgrey;
+        border-radius: 10px;
+        height: 365px;
+    }
+    .card .img_container{
+        margin: auto;
+        width:95%;
+        height:150px;
+        border-radius: 10px;
+    }
+    .card img{
+        width:100%;
+        height: 100%;
+        
+    }
+    .card_heading {
+    text-align: center;
+    margin-top: 10px;
+    padding: 0 5px;
+}
+    .card_heading i {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin-left: 5px;
+}
+    .card_heading .book_name ,.note{
+        color:grey;
+    }
+    .book_name{
+        font-size: .9rem;
+    }
+    .note{
+        font-size: .7rem;
+    }
+    .price_heading {
+    text-align: center;
+    height: 52px;
+    margin-top: 10px;
+    position: absolute;
+    width: 100%;
+    top: 64.5%;
+}
+.otherformat {
+    font-size: .8rem;
+    margin-top: 3px;
+    color: grey;
+}
+
+
+.otherformat span {
+    color: #3073d6;
+    font-weight: bold;
+}
+    .price_heading .price{
+        color:var(--secondary-red);
+        font-weight: bold;
+    }
+    .price_heading .currency{
+        font-size: .8rem;
+        color:red;
+    }
+    .card_info{
+        display: flex;
+        flex-direction: column;
+        gap:10px
+    }
+    .card_icons_container{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+    .card_icons_container span{
+        text-align: center;
+        width:35px;
+        height:35px;
+        line-height: 35px;
+    }
+   
+    .card_icons_container .basket_icon{
+      
+        border-radius: 50%;
+        background-color: var(--main-red);
+        text-align: center;
+        line-height: 35px;
+      
+    }
+    .card_icons_container .basket_icon i{
+        color:white;
+    }
+    .timer_container{
+        position: absolute;
+        top: -3px;;
+        padding:.2rem;
+
+    }
+    .timer_container {
+        text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color:white;
+}
+.timer_container span {
+    
+    background-color: firebrick;
+    display: inline-block;
+    border-radius: 3px;
+    width: 30px;
+    padding: 4px 4px;
+    color: white;
+}
+/* categories SEction*/
+.cate_container{
+    display: flex;
+    gap: 10px;
+   
+    
+}
+
+    .offers_cards_container{
+        margin-top:50px;
+    }
+
+    .shoping_cart{
+        position: relative;
+        
+    }
+    .shoping_cart .basktet_items_added{
+        position: absolute;
+        top:-5px;
+        right:-15px;
+        width:20px;
+        height:20px;
+        border-radius: 50%;
+        background-color: brown;
+        color:white;
+        font-size: .5rem;
+        line-height: 20px;
+        text-align: center;
+    }
+
+
+
+    /* category page styles only*/
+
+.cate_container{
+    margin-top:60px;
+    
+}
+.cat_prod_container{
+    width:90%;
+    padding-top:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+}
+.filer_cat_con {
+    text-align: left;
+    width:99%;
+}
+.filer_cat_con span{
+    font-size: .8rem;
+}
+.filer_cat_con select{
+    padding:0 2.5rem;
+}
+.offers_cards_container{
+        margin-top:10px;
+        width:99%;
+    }
+.show_mr_pro_btn{
+    color:white;
+    width:99%;
+    background-color: var(--main-blue);
+    border-radius: 5px;
+    text-align: center;
+    font-size: .8rem;
+  padding:3px 0;
+  line-height: calc(6px * .8rem);
+
+}
+.line{
+    background-color: #f1f1f1;
+    height:8px;
+    width:100%;
+}
+.recomend{
+    width:99%;
+    text-align: right;
+    color:var(--main-green);
+    font-weight: bold;
+    margin-bottom: 500px;
+}
+.card_icons_container{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        justify-self: flex-end;
+        margin-top: auto;
+        position: absolute;
+        bottom: 11px;
+        width: 100%;
+       
+    }
+    .card_icons_container i{
+       display: inline-block;
+      height:16px;
+      width: 25px;
+      font-size:20px ;
+      color:#42526e;
+    }
+    .card_icons_container i:first-of-type{
+        display: inline-block;
+       height:25px;
+       width: 25px;
+       font-size:20px ;
+       color:#42526e;
+     }
+    
+    .card_icons_container span{
+        text-align: center;
+        width:35px;
+        height:35px;
+        line-height: 35px;
+    }
+    .card_icons_container .basket_icon{
+      
+        border-radius: 50%;
+        background-color: #d40b0e;
+        text-align: center;
+        line-height: 35px;
+        cursor: pointer;
+      
+    }
+    .card_icons_container .basket_icon i{
+        color:white;
+        font-size: 1rem;
+    }
+/* eind category page styles only*/
+@media(max-width:992px){
+    .offers_cards_container{
+        width:100%;
+        /* justify-content: center; */
+    }
+    .cate_container {
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+}
+.cat-section{
+    width:400px;
+    align-self: center;
+   
+}
+.filer_cat_con {
+    text-align: left;
+}
+.card{
+       height:370px;
+   }
+  /* category page styles only*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

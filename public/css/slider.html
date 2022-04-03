@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .slider_container{
+        width:80%;
+        margin:auto;
+        position:relative;
+    }
+.img_slides{
+  width:800px;
+    /* display: none; */
+   position: absolute;
+    overflow: hidden;
+    display: none;
+   
+}
+img{
+    width:100%;
+    
+}
+</style>
+<body>
+        <div class="slider_container">	
+            
+            <div class="img_slides" >			
+                  <img src="img/s_2.jpg">
+                    <div class="text"> slide1</div>
+                     <label class="prev" for="inpt_ptr_5"><span>&#x203a;</span></label>
+                     <label class="next" for="inpt_ptr_2"><span>&#x2039;</span></label>	
+               
+            </div>
+           
+            <div class="img_slides" id="two">
+               
+                  <img src="img/s_1.webp " >
+                  
+                     <label class="prev" for="inpt_ptr_1"><span>&#x203a;</span></label>
+                     <label class="next" for="inpt_ptr_3"><span>&#x2039;</span></label>
+               
+            </div>
+                  
+            <div class="img_slides" id="three">
+                  <img src="img/s_3.webp">	
+                  
+                     <label class="prev" for="inpt_ptr_2"><span>&#x203a;</span></label>
+                     <label class="next" for="inpt_ptr_4"><span>&#x2039;</span></label>
+            </div>
+         
+            <div class="img_slides" id="four">
+                  <img src="img/s_4.jpg">	
+                  
+                     <label class="prev" for="inpt_ptr_3"><span>&#x203a;</span></label>
+                     <label class="next" for="inpt_ptr_5"><span>&#x2039;</span></label>
+            </div>
+         
+            <div class="img_slides" id="five">
+                  <img src="img/s_5.jpg">	
+                  
+                     <label class="prev" for="inpt_ptr_4"><span>&#x203a;</span></label>
+                     <label class="next" for="inpt_ptr_1"><span>&#x2039;</span></label>
+         
+            </div>
+         
+            <div id="nav_slide">
+               <span for="inpt_ptr_1" class="dots" id="dot1"></span>
+               <span for="inpt_ptr_1" class="dots" id="dot1"></span>
+               <span for="inpt_ptr_1" class="dots" id="dot1"></span>
+
+              
+            </div>
+            
+         </div>
+<script>
+    var slides =document.querySelectorAll(".img_slides");
+</script>
+</body>
+
+</html>
