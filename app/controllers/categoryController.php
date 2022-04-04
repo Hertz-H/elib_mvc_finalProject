@@ -105,6 +105,7 @@ public function saveCategory(){
   
       }
       public function activate(){
+        if(isset($_COOKIE['ProductId'])&&isset($_COOKIE['active'])){
         $category=new Category();
         
         $category->is_active= $_COOKIE['active']  ;
@@ -130,6 +131,7 @@ public function saveCategory(){
         // header('location:list_book');
          
         }
+      }
       
 }
 

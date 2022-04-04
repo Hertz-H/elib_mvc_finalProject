@@ -84,6 +84,7 @@ class CityController extends Controller{
 
     }
     public function saveEditted(){
+        
         $city=new City();
         $city->name=$_POST['name'];
        
@@ -109,6 +110,7 @@ class CityController extends Controller{
 
 
     public function activate(){
+     if(isset($_COOKIE['ProductId'])&&isset($_COOKIE['active'])){
         $city=new City();
         
         $city->is_active= $_COOKIE['active']  ;
@@ -130,11 +132,10 @@ class CityController extends Controller{
         );
         $this->removeData("active");
         $this->view('app-city-list',$dataSent);
-        // \print_r(self::$feedback);
-        // header('location:list_book');
+      
          
         }
-
+    }
 
 
 }

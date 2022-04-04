@@ -2,6 +2,8 @@
 namespace coding\app\controllers;
 session_start();
 use coding\app\models\User;
+use coding\app\models\City;  
+use coding\app\models\Address;  
 
 class UsersController extends Controller{
     public  static $feedback=array();
@@ -30,7 +32,6 @@ class UsersController extends Controller{
         $user->name=$_POST['name'];
         $user->email=$_POST['email'];
         $user->password=md5($_POST['password']);
-        // $user->is_active=isset($_POST['is_active'])?1:0;
         $user->is_active=1;
 
         $user->role_id=1;
@@ -51,9 +52,7 @@ class UsersController extends Controller{
          
             $this->view('app-user-list',$dataSent);
          
-        // $this->view('feedback',['success'=>'data inserted successful']);
-        // else 
-        // $this->view('feedback',['danger'=>'can not add data']);
+       
 
     }
     public function verifyUser(){
@@ -110,26 +109,34 @@ class UsersController extends Controller{
     $user->password=md5($_POST['password']);
     $user->is_active=1;
     $user->role_id=1;
-  
-    
-    if($user->save())
+    $userInserted=$user->save();
+    $addressInserted=0;
+   
+    if($userInserted)
 
-    {
+    {  $user=new User();
+        $userInfo = $user->selectWhere("email",$_POST['email']);
+        foreach($userInfo as $u)
+           { $Address=new Address();
+            $Address->user_id=$u['id'];
+            $Address->address=$_POST['address'];
+            $Address->phone=$_POST['phone'];
+            $Address->city_id=$_POST['city'];
+            $Address->is_active=1;
+            $addressInserted=$Address->save();
+       
+        } 
+     }
+     if($addressInserted==1&&$userInserted==1){
         self::$feedback['success']=' تمت العمليةبنجاح';
         header('location:login');
-    }
+     }
         else{
 
             self::$feedback['danger']='فشلت العملية';
             header('location:signup');
         }
-        // $userData=$user->selectAll();       
-        // $dataSent=array(
-        //     $userData,
-        //    self::$feedback
-        // );
-     
-        // $this->view('app-user-list',$dataSent);
+      
     }
 
     public function delete(){
@@ -142,7 +149,9 @@ class UsersController extends Controller{
     }
 
     public  function signup(){
-        $this->view("signup");
+        $city=new City();
+        $cityData=$city->selectAll();
+        $this->view("signup",$cityData);
 
     }
     public  function editPage(){
@@ -172,7 +181,7 @@ class UsersController extends Controller{
     }
     public  function edit(){
 
-        
+      
         $user=new User();
         $user->name=$_POST['name'];
         $user->email=$_POST['email'];
@@ -196,15 +205,13 @@ class UsersController extends Controller{
             $this->view('app-user-list',$dataSent);
          
              
-            // else {
-            // self::$feedback['danger']='فشلت العملية';
-            //  header('location:edit_user');
-            // }
-    
+        
+           
            
         }
 
         public function activate(){
+            if(isset($_COOKIE['ProductId'])&&isset($_COOKIE['active'])){
             $user=new User();
             
             $user->is_active= $_COOKIE['active']  ;
@@ -226,12 +233,11 @@ class UsersController extends Controller{
             );
             $this->removeData("active");
             $this->view('app-user-list',$dataSent);
-            // \print_r(self::$feedback);
-            // header('location:list_book');
+            
              
             }
 
-
+        }
 
 
 

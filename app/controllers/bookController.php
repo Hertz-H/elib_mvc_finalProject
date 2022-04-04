@@ -33,7 +33,7 @@ class BookController extends Controller{
              }   
             else {
             self::$feedback['danger']='فشلت العملية';
-            //  header('location:edit_book');
+            
             }
             $bookData=$book->selectAll();       
             $dataSent=array(
@@ -43,9 +43,6 @@ class BookController extends Controller{
        
             $this->view('app-book-list',$dataSent);
     
-        // $this->view('feedback',['success'=>'تمت العملية بنجاح']);
-        // else 
-        // $this->view('feedback',['danger'=>'فشلت العملية']);
      
         
     
@@ -55,7 +52,7 @@ class BookController extends Controller{
 
 
     public function show(){
-        // \print_r(self::$feedback);
+     
         if(isset($_SESSION["id"])&&!empty($_SESSION["id"])){
             if($_SESSION["role"]==2){
                 $book=new Book();
@@ -187,9 +184,8 @@ public function save_edit(){
        
     }
 public function activate(){
+if(isset($_COOKIE['ProductId'])&&isset($_COOKIE['active'])){
 $book=new Book();
-
-
 $book->is_active= $_COOKIE['active']  ;
 $where_condition = array(  
     'id'     =>  $_COOKIE['ProductId']   
@@ -211,6 +207,10 @@ $dataSent=array(
 );
 $this->removeData("active");
 $this->view('app-book-list',$dataSent);
+ }
+ else{
+
+ }
 // \print_r(self::$feedback);
 // header('location:list_book');
  
