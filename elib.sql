@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 03, 2022 at 05:02 PM
+-- Generation Time: Apr 04, 2022 at 08:04 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.1
 
@@ -75,11 +75,10 @@ CREATE TABLE `books` (
 --
 
 INSERT INTO `books` (`id`, `title`, `image`, `price`, `description`, `pages_number`, `category_id`, `author_id`, `publisher_id`, `quantity`, `format`, `created_by`, `is_active`, `created_at`, `updated_at`) VALUES
-(3, 'بولسي', '62487de45aaa9.jpg', 600, '                                                      بولسي بولسي بولسي بولسي                                                      ', 30, 1, 1, 1, 3, 'ورقية', 10, 1, '2022-03-29 14:58:34', '2022-03-29 14:58:34'),
 (11, 'ليلى والذئب ', '6247e562cea42.jpg', 300, '', 30, 1, 1, 1, 1, 'الكتروني', 4, 1, '2022-04-01 18:39:55', '2022-04-01 18:39:55'),
-(13, 'فلة ', '6248057de6d02.jpg', 700, '                                  فلة فلة فلة                                       ', 30, 1, 1, 1, 1, 'ورقية', 4, 0, '2022-04-02 08:02:34', '2022-04-02 08:02:34'),
-(14, 'ألف ليلة وليلة', '62482e4de403c.jpg', 700, 'ألف ليلة وليلة', 30, 1, 1, 1, 3, 'ورقية', 4, 0, '2022-04-02 11:06:53', '2022-04-02 11:06:53'),
-(15, 'شارلوك هولمز', '62487ed6839ac.jpg', 700, 'شارلوك شارلوك شارلوك ', 30, 1, 1, 1, 3, 'الكترونية', 4, 0, '2022-04-02 16:50:30', '2022-04-02 16:50:30');
+(13, 'فلة ', '6248057de6d02.jpg', 700, '                                  فلة فلة فلة                                       ', 30, 1, 1, 1, 1, 'الكتروني', 4, 1, '2022-04-02 08:02:34', '2022-04-02 08:02:34'),
+(14, 'ألف ليلة وليلة', '62482e4de403c.jpg', 700, 'ألف ليلة وليلة', 30, 1, 1, 1, 3, 'الكتروني', 4, 1, '2022-04-02 11:06:53', '2022-04-02 11:06:53'),
+(15, 'شارلوك هولمز', '62487ed6839ac.jpg', 700, 'شارلوك شارلوك شارلوك ', 30, 1, 1, 1, 3, 'الكتروني', 4, 1, '2022-04-02 16:50:30', '2022-04-02 16:50:30');
 
 -- --------------------------------------------------------
 
@@ -105,9 +104,9 @@ INSERT INTO `categories` (`id`, `name`, `image`, `is_active`, `created_at`, `upa
 (1, 'فكاهي', '62488d9b3435c.jpg', 1, '2022-03-28 20:48:23', '2022-03-28 20:48:23', 10),
 (2, 'رعب', '6243357990ef8.jpg', 1, '2022-03-29 16:36:09', '2022-03-29 16:36:09', 4),
 (3, 'بولسي', '6243386133718.jpg', 1, '2022-03-29 16:48:33', '2022-03-29 16:48:33', 4),
-(4, 'غموض', '6248822b1f793.jpg', 0, '2022-04-02 17:04:43', '2022-04-02 17:04:43', 10),
+(4, 'غموض', '6248822b1f793.jpg', 1, '2022-04-02 17:04:43', '2022-04-02 17:04:43', 10),
 (5, 'أكشن', '624882b50d175.jpg', 1, '2022-04-02 17:07:01', '2022-04-02 17:07:01', 10),
-(6, 'علمي', '62488e2f154c9.jpg', 0, '2022-04-02 17:55:59', '2022-04-02 17:55:59', 10);
+(6, 'علمي', '62488e2f154c9.jpg', 1, '2022-04-02 17:55:59', '2022-04-02 17:55:59', 10);
 
 -- --------------------------------------------------------
 
@@ -129,14 +128,12 @@ CREATE TABLE `cities` (
 --
 
 INSERT INTO `cities` (`id`, `name`, `is_active`, `created_at`, `updated_at`, `created_by`) VALUES
-(4, ' ذمار ', 0, '2022-03-28 17:52:20', '2022-03-28 17:52:20', 4),
+(4, ' ذمار ', 1, '2022-03-28 17:52:20', '2022-03-28 17:52:20', 4),
 (5, 'البيضاء', 1, '2022-03-28 17:52:20', '2022-03-28 17:52:20', 4),
 (6, 'صنعاء', 0, '2022-03-28 17:56:02', '2022-03-28 17:56:02', 4),
-(7, 'صنعاء', 0, '2022-03-28 17:56:02', '2022-03-28 17:56:02', 4),
-(8, 'الحديدة', 0, '2022-03-28 18:12:00', '2022-03-28 18:12:00', 4),
-(9, 'الحديدة', 0, '2022-03-28 18:12:00', '2022-03-28 18:12:00', 4),
 (10, 'أب', 0, '2022-03-28 18:13:52', '2022-03-28 18:13:52', 4),
-(11, 'تعز', 0, '2022-04-03 07:28:46', '2022-04-03 07:28:46', 14);
+(11, 'تعز', 0, '2022-04-03 07:28:46', '2022-04-03 07:28:46', 14),
+(13, 'عدن', 0, '2022-04-04 05:57:55', '2022-04-04 05:57:55', 20);
 
 -- --------------------------------------------------------
 
@@ -185,6 +182,19 @@ CREATE TABLE `orders` (
   `address_id` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`id`, `user_id`, `status`, `total`, `discount`, `net_total`, `created_at`, `upadted_at`, `payment_method`, `address_id`) VALUES
+(9, 24, 0, 5300, 0, 5300, '2022-04-04 17:35:15', '2022-04-04 17:35:15', 1, 2),
+(10, 24, 0, 5300, 0, 5300, '2022-04-04 17:40:05', '2022-04-04 17:40:05', 1, 2),
+(11, 24, 0, 700, 0, 700, '2022-04-04 17:44:12', '2022-04-04 17:44:12', 1, 2),
+(12, 24, 0, 700, 0, 700, '2022-04-04 17:44:44', '2022-04-04 17:44:44', 1, 2),
+(13, 24, 0, 300, 0, 300, '2022-04-04 17:46:23', '2022-04-04 17:46:23', 1, 2),
+(14, 24, 0, 700, 0, 700, '2022-04-04 17:47:04', '2022-04-04 17:47:04', 1, 2),
+(15, 24, 0, 700, 0, 700, '2022-04-04 17:51:01', '2022-04-04 17:51:01', 1, 2);
+
 -- --------------------------------------------------------
 
 --
@@ -199,6 +209,23 @@ CREATE TABLE `order_details` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `order_details`
+--
+
+INSERT INTO `order_details` (`id`, `order_id`, `book_id`, `quantity`, `created_at`, `updated_at`) VALUES
+(5, 9, 3, 3, '2022-04-04 17:35:15', '2022-04-04 17:35:15'),
+(6, 9, 14, 3, '2022-04-04 17:35:15', '2022-04-04 17:35:15'),
+(7, 9, 15, 2, '2022-04-04 17:35:15', '2022-04-04 17:35:15'),
+(8, 10, 3, 3, '2022-04-04 17:40:05', '2022-04-04 17:40:05'),
+(9, 10, 14, 3, '2022-04-04 17:40:05', '2022-04-04 17:40:05'),
+(10, 10, 15, 2, '2022-04-04 17:40:05', '2022-04-04 17:40:05'),
+(11, 11, 13, 1, '2022-04-04 17:44:12', '2022-04-04 17:44:12'),
+(12, 12, 14, 1, '2022-04-04 17:44:44', '2022-04-04 17:44:44'),
+(13, 13, 11, 1, '2022-04-04 17:46:23', '2022-04-04 17:46:23'),
+(14, 14, 13, 1, '2022-04-04 17:47:04', '2022-04-04 17:47:04'),
+(15, 15, 15, 1, '2022-04-04 17:51:01', '2022-04-04 17:51:01');
 
 -- --------------------------------------------------------
 
@@ -299,19 +326,11 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `is_active`, `role_id`, `created_at`, `updated_at`) VALUES
 (4, 'afaf Aslb', 'afaf12@gmail.com', '202cb962ac59075b964b07152d234b70', 1, 1, '2022-03-28 17:48:42', '2022-03-28 17:48:42'),
-(8, ' afaf', 'enas14albakri@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 0, 2, '2022-04-02 13:50:32', '2022-04-02 13:50:32'),
-(9, 'dalia', 'dgdg@gmail.com', '202cb962ac59075b964b07152d234b70', 1, 1, '2022-04-02 13:56:02', '2022-04-02 13:56:02'),
 (10, ' afaf', 'dalia14Ahmed@gmail.com', 'fcea920f7412b5da7be0cf42b8c93759', 1, 2, '2022-04-02 14:21:11', '2022-04-02 14:21:11'),
-(11, ' afaf', 'afaf13albakri@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 0, 1, '2022-04-02 15:34:36', '2022-04-02 15:34:36'),
-(12, ' afaf', 'afaf14albakri@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 0, 1, '2022-04-02 16:41:20', '2022-04-02 16:41:20'),
-(13, 'thekra', 'thekra14albakri@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 0, 1, '2022-04-02 16:43:41', '2022-04-02 16:43:41'),
 (14, ' afaf', 'dgdg@gmail.com', 'fcea920f7412b5da7be0cf42b8c93759', 1, 1, '2022-04-03 06:03:15', '2022-04-03 06:03:15'),
-(15, ' afaf', 'dgdg@gmail.com', '202cb962ac59075b964b07152d234b70', 0, 1, '2022-04-03 06:12:11', '2022-04-03 06:12:11'),
-(16, 'thekra', 'afaf14735albakri@gmail.com', '202cb962ac59075b964b07152d234b70', 0, 1, '2022-04-03 06:14:20', '2022-04-03 06:14:20'),
-(17, 'enas', 'dgdg@gmail.com', '202cb962ac59075b964b07152d234b70', 0, 1, '2022-04-03 06:17:05', '2022-04-03 06:17:05'),
-(18, 'shatha', 'dalia14Ahmed@gmail.com', 'fcea920f7412b5da7be0cf42b8c93759', 0, 1, '2022-04-03 06:18:03', '2022-04-03 06:18:03'),
-(19, 'shahd', 'dgdg@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 1, 1, '2022-04-03 06:20:00', '2022-04-03 06:20:00'),
-(20, 'afaf', 'afaf14735albakri@gmail.com', 'fcea920f7412b5da7be0cf42b8c93759', 1, 2, '2022-04-03 07:47:41', '2022-04-03 07:47:41');
+(20, 'afaf', 'afaf14735albakri@gmail.com', 'fcea920f7412b5da7be0cf42b8c93759', 1, 2, '2022-04-03 07:47:41', '2022-04-03 07:47:41'),
+(24, 'عفاف', 'afaf2@gmail.com', 'fcea920f7412b5da7be0cf42b8c93759', 1, 1, '2022-04-04 05:32:43', '2022-04-04 05:32:43'),
+(25, 'ذكرى', 'thekra@gmail.com', 'fcea920f7412b5da7be0cf42b8c93759', 1, 1, '2022-04-04 05:52:34', '2022-04-04 05:52:34');
 
 -- --------------------------------------------------------
 
@@ -323,7 +342,7 @@ CREATE TABLE `user_addresses` (
   `id` int(2) NOT NULL,
   `user_id` int(2) NOT NULL,
   `city_id` int(2) NOT NULL,
-  `address` varbinary(255) NOT NULL,
+  `address` varchar(255) NOT NULL,
   `phone` varchar(255) NOT NULL,
   `is_active` tinyint(1) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
@@ -331,6 +350,15 @@ CREATE TABLE `user_addresses` (
   `lat` double DEFAULT NULL,
   `lng` double DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user_addresses`
+--
+
+INSERT INTO `user_addresses` (`id`, `user_id`, `city_id`, `address`, `phone`, `is_active`, `created_at`, `updated_at`, `lat`, `lng`) VALUES
+(1, 20, 6, 'شارع  الستين ', '777111222', 1, '2022-04-03 16:17:16', '2022-04-03 16:17:16', NULL, NULL),
+(2, 24, 6, 'sixty street', '7389323456', 1, '2022-04-04 05:32:43', '2022-04-04 05:32:43', NULL, NULL),
+(3, 25, 6, 'fifty street', '7389323456', 1, '2022-04-04 05:52:34', '2022-04-04 05:52:34', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -433,10 +461,7 @@ ALTER TABLE `offers`
 -- Indexes for table `orders`
 --
 ALTER TABLE `orders`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `user_id` (`user_id`),
-  ADD KEY `payment_method` (`payment_method`),
-  ADD KEY `address_id` (`address_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `order_details`
@@ -451,6 +476,7 @@ ALTER TABLE `order_details`
 --
 ALTER TABLE `payements`
   ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `name` (`name`),
   ADD KEY `created_by` (`created_by`);
 
 --
@@ -471,6 +497,7 @@ ALTER TABLE `roles`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`email`),
   ADD KEY `role_fk` (`role_id`);
 
 --
@@ -515,13 +542,13 @@ ALTER TABLE `books`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `cities`
 --
 ALTER TABLE `cities`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `offers`
@@ -533,13 +560,13 @@ ALTER TABLE `offers`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `order_details`
 --
 ALTER TABLE `order_details`
-  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `payements`
@@ -563,13 +590,13 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `user_addresses`
 --
 ALTER TABLE `user_addresses`
-  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `user_payment_methods`
@@ -621,19 +648,10 @@ ALTER TABLE `offers`
   ADD CONSTRAINT `offers_ibfk_1` FOREIGN KEY (`created_by`) REFERENCES `users` (`id`);
 
 --
--- Constraints for table `orders`
---
-ALTER TABLE `orders`
-  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
-  ADD CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`payment_method`) REFERENCES `payements` (`id`),
-  ADD CONSTRAINT `orders_ibfk_3` FOREIGN KEY (`address_id`) REFERENCES `user_addresses` (`id`);
-
---
 -- Constraints for table `order_details`
 --
 ALTER TABLE `order_details`
-  ADD CONSTRAINT `order_details_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`),
-  ADD CONSTRAINT `order_details_ibfk_2` FOREIGN KEY (`book_id`) REFERENCES `books` (`id`);
+  ADD CONSTRAINT `order_details_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`);
 
 --
 -- Constraints for table `payements`
