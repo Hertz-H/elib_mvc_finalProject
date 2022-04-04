@@ -615,10 +615,7 @@
          
         </div>
       </div>
-      <?php 
-       print_r($_COOKIE);
-      // print_r($params);
-      ?>     
+          
       <div class="card-body">
         <div class="row">
           <div class="col-lg-8 mx-auto">

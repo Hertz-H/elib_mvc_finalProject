@@ -82,7 +82,7 @@
  <div class="payment hidden " >
 
     <form action="" >
-        <div class="input_containtr pay">
+        < class="input_containtr pay">
             <span class="pay_method">طريقة الدفع  </span>
             <select name="contry_key" class="contry_key">
                 <option value="967">ايداع  </option>
@@ -90,7 +90,22 @@
                 <option value=""> حوالة</option>
             </select>
             
-        </div>
+        </<form action="">
+         <div class="input_containtr"><input type="text">
+             <span class="input_title">الاسم</span>
+         </div>
+       
+         <div class="input_containtr"><input type="text">
+             <span class="input_title">المنطقة   </span>
+         </div>
+         <div class="input_containtr"><input type="text">
+             <span class="input_title">العنوان   </span>
+         </div>
+         <div class="input_containtr"><input type="text">
+             <span class="input_title">رقم التلفون </span>
+         </div>
+                                                       
+    </form>div>
         <div class="input_containtr"><input type="text">
             <span class="input_title">رقم الحساب  </span>
         </div>
