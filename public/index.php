@@ -141,6 +141,7 @@ Router::get('/activate_user',[UsersController::class,'activate']);
 Router::get('/edit_user',[UsersController::class,'editPage']);
 Router::post('/edit_user',[UsersController::class,'edit']);
 Router::get('/order',[OrderController::class,'load']);
+Router::post('/order',[OrderController::class,'saveOrder']);
 
 
 
