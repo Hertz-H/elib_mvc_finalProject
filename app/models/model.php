@@ -19,6 +19,7 @@ class Model{
         $values=implode(",",$values);
         $columns=implode(",",$columns);
        $sql_query="insert into ".self::$tblName." (".$columns." ) values (".$values.")";
+    //    echo  $sql_query."<br>";
         $stmt=AppSystem::$appSystem->database->pdo->prepare($sql_query);
         if($stmt->execute())
          return true;
@@ -30,7 +31,7 @@ class Model{
         $table=self::$tblName;
         $where="$condCol = '$condVal'";
         $sql_query="select * from $table where $where";
-
+        // echo $sql_query."<br>";
         // print_r( $sql_query);
         $stmt=AppSystem::$appSystem->database->pdo->prepare($sql_query);
         $stmt->execute();
@@ -40,8 +41,8 @@ class Model{
         
 
     }
-    public function selectAll(){
-        $sql_query="select * from ".self::$tblName."";
+    public function selectAll($order=null,$limit=null){
+        $sql_query="select * from ".self::$tblName." ".$order." ".$limit;
         $stmt=AppSystem::$appSystem->database->pdo->prepare($sql_query);
         $stmt->execute();
         return $stmt->fetchAll();

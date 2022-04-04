@@ -3,12 +3,12 @@ namespace coding\app\models;
 
 
 
-class UserPayment extends Model{
+class Order extends Model{
    
 
     function __construct()
     {
-        parent::$tblName="user_payment_methods";
+        parent::$tblName="orders";
         
     }
 
